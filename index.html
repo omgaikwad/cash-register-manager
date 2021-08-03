@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Cash Register Manager</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1 class="heading">Cash Register Manager</h1>
-        <p class="desription">Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
+      <h1 class="heading">Cash Register Manager</h1>
+      <p class="desription">
+        Enter the bill amount and cash given by the customer and know minimum
+        number of notes to return.
+      </p>
 
-        <!-- Input bill amount -->
-        <label for="bill-amount">Bill Amount:</label>
-        <input id="bill-amount" type="number">
+      <!-- Input bill amount -->
+      <label class="label">Bill Amount:</label>
+      <input id="bill-amount" type="number" />
+      <button id="next-button">Next</button>
 
-        <!-- Input Cash Given -->
-        <label for="cash-given">Cash Given:</label>
-        <input id="cash-given" type="number">
-
-        <!-- Check Button -->
+      <!-- Input Cash Given -->
+      <div class="cash-given-div">
+        <label class="label">Cash Given:</label>
+        <input id="cash-given" type="number" />
         <button id="check-button">Check</button>
+      </div>
 
-        <!-- Show Error Message -->
-        <p id="error-message"></p>
+      <!-- Show Error Message -->
+      <p id="error-message"></p>
 
-        <!-- Change to be given Table -->
-        <table class="change-table">
-            <caption>Return Change:</caption>
+      <!-- Change to be given Table -->
+      <div class="change-return-div">
+        <label class="label">Return Change: </label>
+        <div id="output-table">
+          <table class="change-table">
             <tr>
-                <th>No. of Notes</th>
-                <td class="no-of-notes"></td>
-                <td class="no-of-notes"></td>
-                <td class="no-of-notes"></td>
-                <td class="no-of-notes"></td>
-                <td class="no-of-notes"></td>
-                <td class="no-of-notes"></td>
-                <td class="no-of-notes"></td>
+              <th>No. of Notes</th>
+              <td class="no-of-notes"></td>
+              <td class="no-of-notes"></td>
+              <td class="no-of-notes"></td>
+              <td class="no-of-notes"></td>
+              <td class="no-of-notes"></td>
+              <td class="no-of-notes"></td>
+              <td class="no-of-notes"></td>
             </tr>
             <tr>
-                <th>Note</th>
-                <td>2000</td>
-                <td>500</td>
-                <td>100</td>
-                <td>20</td>
-                <td>10</td>
-                <td>5</td>
-                <td>1</td>
+              <th>Note</th>
+              <td>2000</td>
+              <td>500</td>
+              <td>100</td>
+              <td>20</td>
+              <td>10</td>
+              <td>5</td>
+              <td>1</td>
             </tr>
-        </table>
+          </table>
+        </div>
+      </div>
     </div>
-</body>
-<script src="./app.js"></script>
+  </body>
+  <script src="./app.js"></script>
 </html>
