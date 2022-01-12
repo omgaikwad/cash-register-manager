@@ -32,19 +32,19 @@ checkButton.addEventListener("click", function validateBillAndCashAmount() {
   }
 });
 
-function calculateChange(amountToBeReturned) {
+const calculateChange = (amountToBeReturned) => {
   changeReturnDiv.style.display = "block";
   for (let i = 0; i < availableNotes.length; i++) {
     const numberOfNotes = Math.trunc(amountToBeReturned / availableNotes[i]);
     amountToBeReturned %= availableNotes[i];
     noOfNotes[i].innerText = numberOfNotes;
   }
-}
+};
 
-function hideErrorMessage() {
+const hideErrorMessage = () => {
   errorMessage.style.display = "none";
-}
-function showErrorMessage(msg) {
+};
+const showErrorMessage = (msg) => {
   errorMessage.style.display = "block";
   errorMessage.innerText = msg;
-}
+};
